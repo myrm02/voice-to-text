@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Just talk</title>
+</head>
+<body>
+    <h1 id="main-title">Dis des couleurs ou des fruits avec ta belle voix !</h1>
+    <p id="precision">Attention : Nous vous conseillons fortement de tester cette page utilisant Web Speech API sur navigateur Google Chrome.</p>
+    <div id="main-section">
+        <section>
+            <button id="btn-keywords">Liste des mots-clés</button>
+            <div id="keywords" class="none">
+                <ul>⤖ Fruits
+                    <li>Fraise</li>
+                    <li>Pomme</li>
+                    <li>Citron</li>
+                    <li>Cerise</li>
+                    <li>Banane</li>
+                </ul>
+                <ul>⤖ Couleurs
+                    <li>Bleu</li>
+                    <li>Rouge</li>
+                    <li>Vert</li>
+                    <li>Jaune</li>
+                    <li>Orange</li>
+                    <li>Rose</li>
+                    <li>Violet</li>
+                    <li>Gris</li>
+                    <li>Noir</li>
+                    <li>Blanc</li>
+                </ul>
+            </div>
+        </section>
+        <section id="container">
+            <div id="button-container">
+                <button id="start-bouton">Lancer Speech Recognition</button>
+                <button id="stop-bouton">Stop</button>
+                <button id="reset-bouton">Reset le contenu</button>
+            </div>
+            <div id="output"></div>
+        </section>
+    </div>
+
+    <section>
+        <div>
+            <img src="img/raining_bananas.gif" alt="raining bananas" id="bananaRain">
+        </div>
+        <div>
+            <img src="img/cherry.gif" alt="raining cherry" id="ceriseRain">
+        </div>
+        <div>
+            <img src="img/strawberry.gif" alt="raining strawberry" id="fraiseRain">
+        </div>
+        <div>
+            <img src="img/apples_rain.gif" alt="raining apples" id="appleRain">
+        </div>
+        <div>
+            <img src="img/lemon.gif" alt="falling lemons" id="citronRain">
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
