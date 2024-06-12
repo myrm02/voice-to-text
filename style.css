@@ -1,119 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', sans-serif;
+}
 
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+    min-height: 100vh;
+  padding: 20px;
+}
 
-body{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+#main-title {
+  margin: 20px 0;
+  font-size: 2.5em;
+  text-align: center;
+  color: #131112;
+}
 
+#precision {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #555;
 }
 
 #main-section {
   display: flex;
-  gap: 10%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
 }
 
-#main-title{
-    margin:5vh 0 7vh 0;
-}
-#precision {
-  margin-bottom: 5vh;
-}
-#container{
-    width: 100vh;
-    padding: 5vh;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;}
-
-#button-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+section {
+  margin: 10px 0;
 }
 
-/* .langues{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+#keywords {
+  background: #fff;
+  border: 2px solid #69c8ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-/* .langues select{
-    width: 30vh;
-    border: 1px solid green;
-    border-radius: 5px;
-} */
+ul {
+  margin-bottom: 15px;
+  list-style: none;
+}
 
-ul {margin-bottom: 3vh; margin-top: 3vh;}
+ul li {
+  margin: 5px 0;
+  color: #69cbff;
+}
 
-#output {
-    height: 200px; 
-    overflow-y: scroll; 
-  }
+#container {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  #output p {
-    display: block;
-  }
-  
+#button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
 button {
-  align-items: center;
   appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
+  background-image: radial-gradient(100% 100% at 100% 0, #69e9ff 0, #219af0 100%);
+  border: none;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: transform 0.2s;
 }
 
 button:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  outline: none;
 }
 
 button:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
-button:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
+#output {
+  height: 200px;
+  overflow-y: auto;
+  border: 2px solid #69dfff;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9f9f9;
 }
 
+#output p {
+  margin: 5px 0;
+}
 
 #bananaRain, #ceriseRain, #fraiseRain, #appleRain, #citronRain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%; 
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  display: none;
 }
 
 .none {

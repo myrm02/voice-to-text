@@ -55,7 +55,6 @@ if ('webkitSpeechRecognition' in window) {
 	  let newParagraph = document.createElement("p");
 	  newParagraph.textContent = result;
 	  output.appendChild(newParagraph);
-  
 	};
   
 	document.querySelector('#stop-bouton').addEventListener('click', () => {
@@ -75,5 +74,9 @@ let btnKeywords = document.getElementById('btn-keywords');
 let divKeywords = document.getElementById('keywords');
 
 btnKeywords.addEventListener('click', () => {
-	divKeywords.classList.remove('none');
-})
+	if (divKeywords.classList.contains('none')) {
+		divKeywords.classList.remove('none');
+	} else {
+		divKeywords.classList.add('none');
+	}
+});
