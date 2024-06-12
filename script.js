@@ -55,6 +55,34 @@ if ('webkitSpeechRecognition' in window) {
 	  let newParagraph = document.createElement("p");
 	  newParagraph.textContent = result;
 	  output.appendChild(newParagraph);
+
+	  fetch("https://voice-to-text-api.onrender.com/", {
+		// Adding method type
+		method: "POST",
+
+		headers: {
+			'x-rapidapi-key': '5279274116mshfb09f8d31d5c9e4p18d144jsn5da42cdeb7c7',
+			'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
+			'Content-Type': 'application/json'
+		},
+	
+		// Adding body or contents to send
+		body: JSON.stringify({
+			q: result,
+			source: "fr",
+			target: "en"
+		})
+	  }).then((res) => {
+		console.log(res.json().then((text) => myDisplay(text.translatedText)))
+	  })
+
+	  function myDisplay(text) {
+		let output = document.querySelector('#translation');
+	  	let newParagraph = document.createElement("p");
+	  	newParagraph.textContent = text;
+	  	output.appendChild(newParagraph);
+	  }
+  
 	};
   
 	document.querySelector('#stop-bouton').addEventListener('click', () => {
